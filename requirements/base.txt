@@ -1,0 +1,107 @@
+# Wheel 0.25+ needed to install certain packages on CPython 3.5+
+# like Pillow and psycopg2
+# See http://bitly.com/wheel-building-fails-CPython-35
+# Verified bug on Python 3.5.1
+wheel==0.30.0
+
+
+# Bleeding edge Django
+django==1.11.7 # pyup: >=1.10,<1.11
+
+# Configuration
+django-environ==0.4.4
+whitenoise==3.3.1
+
+
+# Forms
+django-crispy-forms==1.7.0
+
+# Models
+django-model-utils==3.0.0
+
+# Images
+Pillow==4.3.0
+
+# Password storage
+argon2-cffi==16.3.0
+
+# For user registration, either via email or social
+# Well-built with regular release cycles!
+django-allauth==0.34.0
+
+
+# Python-PostgreSQL Database Adapter
+psycopg2==2.7.3.2
+
+# Unicode slugification
+awesome-slugify==1.6.5
+
+# Time zones support
+pytz==2017.3
+
+# Redis support
+django-redis==4.8.0
+redis>=2.10.5
+
+
+celery==3.1.25
+
+
+
+rcssmin==1.0.6
+django-compressor==2.2
+
+
+# Your custom requirements go here
+
+# Operational Helpers
+django-cors-headers==2.1.0
+dj-database-url==0.4.2
+
+# User Tools
+django_guardian==1.4.9
+django_organizations==0.9.3
+django-impersonate==1.2.1
+
+# Rest Framework / API / Sockets
+djangorestframework==3.7.3
+djangorestframework_jwt==1.11.0
+djangorestframework-gis==0.12
+djangorestframework-recursive==0.1.2
+django_oauth_toolkit==1.0.0
+django-rest-framework-social-oauth2==1.0.8
+rest-pandas==1.0.0
+markdown==2.6.9
+django_filter==1.1.0
+graphene==2.0.1
+graphene_django==2.0.0
+
+# Data Science
+matplotlib==2.1.0
+numpy==1.13.3
+scipy==1.0.0
+scikit_learn==0.19.1
+pandas==0.21.0
+django-pandas==0.4.5
+
+# GIS / Shape Files
+pyshp==1.2.12
+django-leaflet==0.22.0
+geopy==1.11.0
+django-geojson==2.10.0
+Shapely==1.6.2.post1
+django-raster==0.5
+django-spillway==0.7.0
+
+# Handle Files
+gspread==0.6.2
+django-import-export==0.6.0
+
+# Admin Helpers
+git+https://github.com/jet-community/django-jet.git@master
+git+https://github.com/millerhooks/django-jsoneditor.git
+
+graphistry==0.9.51
+
+
+
