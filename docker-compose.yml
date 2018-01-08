@@ -1,0 +1,29 @@
+version: '2'
+
+volumes:
+  postgres_data_local: {}
+  postgres_backup_local: {}
+
+services:
+  django: &django
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app
+    environment:
+      - POSTGRES_USER=django
+      - USE_DOCKER=yes
+    ports:
+      - "8000:8000"
+    command: /start.sh
+
+  postgres:
+    image: mdillon/postgis:10
+    volumes:
+      - ${PWD}/.db/postgis_data_dev:/var/lib/postgresql/data
+      - ${PWD}/.db/postgis_backup_dev:/backups
+    environment:
+      - POSTGRES_USER=django
